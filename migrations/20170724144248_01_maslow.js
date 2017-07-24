@@ -5,8 +5,8 @@ exports.up = function(knex, Promise) {
     table.text('shelter')
     table.text('protection')
     table.text('transportation')
-    table.integer('how many people in group')
-    table.boolean('infected?').notNullable()
+    table.integer('how_many_people_in_group')
+    table.boolean('infected').notNullable()
   })
 };
 
