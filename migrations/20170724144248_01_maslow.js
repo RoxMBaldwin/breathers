@@ -2,6 +2,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('maslow', (table) => {
     table.increments()
+    table.text('name')
     table.text('shelter')
     table.text('protection')
     table.text('transportation')
