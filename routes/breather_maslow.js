@@ -17,5 +17,12 @@ router.get('/meatdecoy/:id', (request, response) => {
   })
 })
 
+router.post('/meatdecoy', (request, response) => {
+  var body = request.body
+  queries.postNew(body)
+  .then(function(message){
+  response.json({message:'made new'})
+  })
+})
 
 module.exports = router
