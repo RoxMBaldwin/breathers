@@ -25,4 +25,18 @@ router.post('/meatdecoy', (request, response) => {
   })
 })
 
+router.delete('/meatdecoy/:id', (request, response) => {
+  queries.deletePost(request.params.id)
+  .then(function(message) {
+    response.json({message: "ANOTHER ONE BITES THE DUST"})
+  })
+})
+
+router.put('/meatdecoy/:id', (request, response) => {
+  queries.addPost(request.element)
+  .then(function(message){
+    response.json({message:"new thingy"})
+  })
+})
+
 module.exports = router
