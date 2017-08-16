@@ -17,8 +17,8 @@ module.exports = {
     return knex('maslow').where('maslow.id', id).del()
   },
 
-  addPost: function(id){
-    return knex('maslow').insert(element)
+  addPut: function(id, body){
+    return knex('maslow').where('maslow.id', id).update(body).returning('*')
   }
 
 }

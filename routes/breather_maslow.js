@@ -33,9 +33,9 @@ router.delete('/meatdecoy/:id', (request, response) => {
 })
 
 router.put('/meatdecoy/:id', (request, response) => {
-  queries.addPost(request.element)
+  queries.addPut(request.params.id, request.body)
   .then(function(message){
-    response.json({message:"new thingy"})
+    response.json({message})
   })
 })
 
